@@ -26,7 +26,7 @@ This rebuilds home-manager config. The 1-3 steps are **required** before running
 
 Run this every time `home-manager/home.nix` changes.
 
-Alternatively `home-manager switch --flake .#username@hostname`
+Alternatively `home-manager switch --flake .#username@hostname` (e.g. `home-manager switch --flake .#pasza@nixos`)
 
 ## Updating packages
 
