@@ -78,6 +78,7 @@
       ../packages/wezterm/wezterm.nix
       ../packages/yazi/yazi.nix
 #      ../packages/ytdlp/ytdlp.nix
+      ../packages/zoxide/zoxide.nix
 
 #      ../scripts/youtube_channel_archiver/youtube_channel_archiver.nix
 #      ../scripts/single_song_downloader/single_song_downloader.nix
