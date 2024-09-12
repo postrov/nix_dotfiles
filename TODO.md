@@ -8,4 +8,7 @@
 [ ] my font?
 [ ] terminal config (kitty? foot?)
 [ ] hyprland..
-
+[ ] git
+  [ ] configure email, user
+  [ ] add credential helper
+[x] tmux
