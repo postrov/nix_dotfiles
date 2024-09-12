@@ -36,3 +36,11 @@ Alternatively `home-manager switch --flake .#username@hostname` (e.g. `home-mana
 ## Warning
 
 * Using this setup requires files to be in git, otherwise they are not seen by the tools
+
+## Extra setup for neovim
+
+Since neovim uses external configuration (`mkOutOfStoreSymlink`),
+and installing LSPs requires build tools, it's good idea to run itfirst within nix shell like this:
+
+`nix shell nixpkgs#clang nixpkgs#gcc nixpkgs#binutils nixpkgds#nodejs`
+

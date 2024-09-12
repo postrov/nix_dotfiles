@@ -67,6 +67,7 @@
       ../packages/lazygit/lazygit.nix
 #      ../packages/megasync/megasync.nix
       ../packages/nap/nap.nix
+      ../packages/neovim/neovim.nix
 #      ../packages/qbittorrent/qbittorrent.nix
 #      ../packages/rename/rename.nix
       ../packages/ripgrep/ripgrep.nix

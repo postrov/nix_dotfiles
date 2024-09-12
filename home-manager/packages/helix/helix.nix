@@ -8,7 +8,7 @@
 
   programs.helix = {
     enable = true;
-		defaultEditor = true;
+		defaultEditor = false;
   };
 
   xdg.configFile."helix/config.toml".source = ./config.toml;
