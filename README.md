@@ -42,5 +42,8 @@ Alternatively `home-manager switch --flake .#username@hostname` (e.g. `home-mana
 Since neovim uses external configuration (`mkOutOfStoreSymlink`),
 and installing LSPs requires build tools, it's good idea to run itfirst within nix shell like this:
 
-`nix shell nixpkgs#clang nixpkgs#gcc nixpkgs#binutils nixpkgds#nodejs`
+* `nix shell nixpkgs#clang nixpkgs#gcc nixpkgs#binutils nixpkgds#nodejs`
 
+The external dotfiles also need to be checked out:
+
+* `git clone https://github.com/postrov/dotfiles my_dotfiles`
