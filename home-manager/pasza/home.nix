@@ -61,8 +61,10 @@
       ../packages/fd/fd.nix
 #      ../packages/feh/feh.nix
       ../packages/fish/fish.nix
+      ../packages/git/git.nix
       ../packages/helix/helix.nix
       ../packages/htop/htop.nix
+      ../packages/lazygit/lazygit.nix
 #      ../packages/megasync/megasync.nix
       ../packages/nap/nap.nix
 #      ../packages/qbittorrent/qbittorrent.nix
