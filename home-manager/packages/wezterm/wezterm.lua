@@ -5,7 +5,7 @@ local act = wezterm.action
 local config = {}
 
 config.color_scheme = "Tokyo Night Storm"
-config.font_size = 16
+config.font_size = 14
 
 config.leader = { key = 'Space', mods = 'CTRL' }
 config.keys = {

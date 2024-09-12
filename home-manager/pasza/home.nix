@@ -34,7 +34,7 @@
   };
 
   systemd.user.sessionVariables = {
-    EDITOR = "helix";
+    EDITOR = "vim";
 #    TERM = "fish";
   };
 
@@ -64,6 +64,7 @@
       ../packages/git/git.nix
       ../packages/helix/helix.nix
       ../packages/htop/htop.nix
+      ../packages/kitty/kitty.nix
       ../packages/lazygit/lazygit.nix
 #      ../packages/megasync/megasync.nix
       ../packages/nap/nap.nix
@@ -74,6 +75,7 @@
       ../packages/signal-desktop/signal-desktop.nix
       ../packages/sd/sd.nix
       ../packages/starship/starship.nix
+      ../packages/tmux/tmux.nix
       ../packages/tree/tree.nix
 #      ../packages/vlc/vlc.nix
       ../packages/wezterm/wezterm.nix
