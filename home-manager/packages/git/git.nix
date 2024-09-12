@@ -11,7 +11,7 @@
     userName = "Paweł Ostrowski";
 
       extraConfig = {
-		# This makes git rebuild, which takes long time :(
+    # This makes git rebuild, which takes long time :(
         credential.helper = "${
             pkgs.git.override { withLibsecret = true; }
           }/bin/git-credential-libsecret";

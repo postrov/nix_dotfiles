@@ -2,8 +2,8 @@
 
 {
 
-	home.packages = with pkgs; [
-		nap
-	];
-  
+  home.packages = with pkgs; [
+    nap
+  ];
+
 }

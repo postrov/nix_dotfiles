@@ -1,14 +1,14 @@
-{ # parameters passed in from ~/.dotfiles/flake.nix. These were passed in via `inherit` 
-	browser,
-	config,
-	editor,
-	inputs,
-	lib,
-	pkgs,
-	shell,
-	terminal,
-	username,
-	... 
+{ # parameters passed in from ~/.dotfiles/flake.nix. These were passed in via `inherit`
+  browser,
+  config,
+  editor,
+  inputs,
+  lib,
+  pkgs,
+  shell,
+  terminal,
+  username,
+  ...
 }:
 
 # https://nix-community.github.io/home-manager/options.xhtml

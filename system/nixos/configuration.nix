@@ -94,7 +94,7 @@
         };
       };
     };
-  }; 
+  };
 
   ### X11 start
   # Enable the X11 windowing system.

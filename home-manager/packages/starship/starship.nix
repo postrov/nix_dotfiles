@@ -6,7 +6,7 @@
     starship
   ];
 
-  #      the standard path under ~/.config/ 
+  #      the standard path under ~/.config/
   #           to find the file       Where the file is located relative to this .nix file
   #                    |                             |
   #                    V                             V
@@ -16,5 +16,5 @@
     enable = true;
     enableFishIntegration = true;
   };
-  
+
 }

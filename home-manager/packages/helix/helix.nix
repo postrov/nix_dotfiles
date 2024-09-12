@@ -2,13 +2,13 @@
 
 {
 
-	home.packages = with pkgs; [
+  home.packages = with pkgs; [
     helix
-	];
+  ];
 
   programs.helix = {
     enable = true;
-		defaultEditor = false;
+    defaultEditor = false;
   };
 
   xdg.configFile."helix/config.toml".source = ./config.toml;

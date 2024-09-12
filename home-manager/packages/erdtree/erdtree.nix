@@ -2,9 +2,9 @@
 
 {
 
-	home.packages = with pkgs; [
-		erdtree
-	];
+  home.packages = with pkgs; [
+    erdtree
+  ];
 
-  
+
 }

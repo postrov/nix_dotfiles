@@ -23,6 +23,6 @@
     terminal = false; # true will pop up the system default terminal in addition to launching to program
     type = "Application";
     categories = [ "X-terminal" ];
-  };  
+  };
 
 }

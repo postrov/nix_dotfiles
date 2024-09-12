@@ -2,14 +2,14 @@
 
 {
 
-	home.packages = with pkgs; [
+  home.packages = with pkgs; [
     eza
-	];
+  ];
 
   programs.eza = {
-  	enable = true;
+    enable = true;
     icons = true;
     git = true;
   };
-  
+
 }

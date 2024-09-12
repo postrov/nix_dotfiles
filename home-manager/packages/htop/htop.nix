@@ -2,13 +2,13 @@
 
 {
 
-	home.packages = with pkgs; [
-		htop
-	];
+  home.packages = with pkgs; [
+    htop
+  ];
 
   programs.htop = {
     enable = true;
-  
+
   };
-  
+
 }

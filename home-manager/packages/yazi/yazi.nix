@@ -2,8 +2,8 @@
 
 {
 
-	home.packages = with pkgs; [
-		yazi
-	];
+  home.packages = with pkgs; [
+    yazi
+  ];
 
 }

@@ -27,7 +27,7 @@ $docker_context\
 [](fg:#d3d7cf)\
 $time\
 $cmd_duration
-󱞪 
+󱞪
 """
 
 command_timeout = 1000

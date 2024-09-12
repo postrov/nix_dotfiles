@@ -12,8 +12,8 @@
 
 
   # https://wezfurlong.org/wezterm/config/files.html
-  
-  #      the standard path under ~/.config/ 
+
+  #      the standard path under ~/.config/
   #     to find the config file       Where the config file is located relative to this .nix file
   #                    |                             |
   #                    V                             V
@@ -31,6 +31,6 @@
     terminal = false; # true will pop up the system default terminal in addition to launching to program
     type = "Application";
     categories = [ "X-terminal" ];
-  };  
+  };
 
 }
