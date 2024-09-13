@@ -33,6 +33,7 @@
     };
   };
 
+  # Below didn't work for me, at least in shell
   systemd.user.sessionVariables = {
     EDITOR = "vim";
 #    TERM = "fish";
@@ -41,7 +42,6 @@
   home.sessionVariables = {
     EDITOR = "vim";
   };
-
 
   # I have seperated every package I want on my system within its own directory and .nix file
   # This makes my system extreamly modular as each file is responsible for
@@ -92,6 +92,4 @@
 ];
 
 }
-
-
 

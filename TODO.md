@@ -5,10 +5,14 @@
   [x] reduce needless aliases
   [x] integrate zoxide: `zoxide init fish | source`
   [ ] make sure everything from regular dotfiles is reproduced
-[ ] my font?
-[ ] terminal config (kitty? foot?)
+  [x] fix fish functions not running on first invocation
+[-] my font?
+[x] terminal config (kitty? foot?)
 [ ] hyprland..
-[ ] git
-  [ ] configure email, user
-  [ ] add credential helper
+[x] git
+  [x] configure email, user
+  [x] add credential helper
 [x] tmux
+[ ] how to do ssh config?
+[ ] fzf
+[ ] firefox config
