@@ -71,33 +71,26 @@ programs.fish = {
   };
 
   functions = {
-
     lsr = ''
-    function lsr
-                  ls | rg -i $argv[1]
-    end
+      ls | rg -i $argv[1]
      '';
 
-                mkcd = ''
-                function mkcd --argument name
-                  mkdir -p $name
-                  cd $name
-                end
+    mkcd = ''
+      mkdir -p $argv[1]
+      cd $argv[1]
     '';
 
-                yy = ''
-                function yy
-                  set tmp (mktemp -t "yazi-cwd.XXXXXX")
-                  yazi $argv --cwd-file="$tmp"
-                  if set cwd (cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-                    cd -- "$cwd"
-                  end
-                  rm -f -- "$tmp"
-                end
-                '';
+    yy = ''
+      set tmp (mktemp -t "yazi-cwd.XXXXXX")
+      yazi $argv --cwd-file="$tmp"
+      if set cwd (cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+        cd -- "$cwd"
+      end
+      rm -f -- "$tmp"
+    '';
   };
-        interactiveShellInit = ''
-          zoxide init fish | source
-        '';
+  interactiveShellInit = ''
+    zoxide init fish | source
+  '';
 };
 }
