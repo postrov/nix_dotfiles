@@ -9,6 +9,9 @@
    home-manager.url = "github:nix-community/home-manager/release-24.05";
    home-manager.inputs.nixpkgs.follows = "nixpkgs"; # This line makes sure that "nixpkgs.url" and "home-manager.url" stay in sync and can work together
 
+   # Hyprland
+   hyprland.url = "github:hyprwm/Hyprland";
+
  };
 
  outputs = { self, nixpkgs, home-manager, ... }@inputs: # <- this `@inputs` will expose the block of code below, to the inputs that you set above.

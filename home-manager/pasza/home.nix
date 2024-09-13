@@ -68,6 +68,7 @@
       ../packages/git/git.nix
       ../packages/helix/helix.nix
       ../packages/htop/htop.nix
+      ../packages/hyprland/hyprland.nix
       ../packages/kitty/kitty.nix
       ../packages/lazygit/lazygit.nix
 #      ../packages/megasync/megasync.nix
