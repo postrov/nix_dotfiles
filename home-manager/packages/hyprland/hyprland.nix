@@ -12,29 +12,30 @@
         export XCURSOR_SIZE=24
 
         exec Hyprland
-	  '';
+      '';
       executable = true;
-	};
+    };
   };
   home.packages = with pkgs; [
-	brightnessctl
-	cliphist
-	pywal
+    brightnessctl
+    cliphist
+    pywal
     rofi-wayland
-	swaylock
-	waybar
+    swaylock
+    waybar
     wlogout
   ];
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
+      "monitor" = ",1920x1080@60,auto,1";
       "$mod" = "SUPER";
 
-	  bind = [
-	    "$mod, RETURN, exec, kitty"
-	    "$mod, SPACE, exec, rofi -show drun -replace"
+      bind = [
+        "$mod, RETURN, exec, kitty"
+        "$mod, SPACE, exec, rofi -show drun -replace"
 
-		# Windows:
+        # Windows:
         "$mod, Q, killactive"
         "$mod, F, fullscreen"
         # "$mod, E, exec, ~/.config/scripts/filemanager.sh"
@@ -54,7 +55,7 @@
         "$mod SHIFT, up, resizeactive, 0 -100"
         "$mod SHIFT, down, resizeactive, 0 100"
 
-		# Actions:
+        # Actions:
         #"$mod", PRINT, exec, ~/.config/hypr/scripts/screenshot.sh"
         "$mod CTRL, Q, exec, wlogout"
         #"$mod SHIFT, W, exec, ~/.config/hypr/scripts/wallpaper.sh"
@@ -108,7 +109,7 @@
         ", XF86Calculator, exec, qalculate-gtk"
         ", XF86Lock, exec, swaylock"
         ", XF86Tools, exec, alacritty --class .config-floating -e ~/.config/hypr/settings/settings.sh"
-	  ];
+    ];
       bindm = [
         "$mod, mouse:272, movewindow"
         "$mod, mouse:273, resizewindow"
@@ -116,4 +117,8 @@
       ];
     };
   };
+
+  xdg.configFile."waybar/waybar-black.css".source = ./waybar-black.css;
+  xdg.configFile."waybar/waybar-base.css".source = ./waybar-base.css;
+  xdg.configFile."waybar/waybar.config".source = ./waybar.config;
 }

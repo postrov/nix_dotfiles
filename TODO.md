@@ -9,6 +9,8 @@
 [-] my font?
 [x] terminal config (kitty? foot?)
 [ ] hyprland..
+  [ ] set scaling to 1.0
+  [ ] configure waybar
 [x] git
   [x] configure email, user
   [x] add credential helper
