@@ -10,7 +10,7 @@
    home-manager.inputs.nixpkgs.follows = "nixpkgs"; # This line makes sure that "nixpkgs.url" and "home-manager.url" stay in sync and can work together
 
    # Hyprland
-   hyprland.url = "github:hyprwm/Hyprland";
+   hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
  };
 

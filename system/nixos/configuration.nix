@@ -25,9 +25,8 @@
   nix.extraOptions = '' experimental-features = nix-command flakes '';
 
   # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
-  boot.loader.grub.useOSProber = true;
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   ## Efi conf
   #boot.loader.systemd-boot.enable = true;
@@ -110,6 +109,14 @@
     variant = "";
   };
   ### X11 end
+
+  programs.hyprland = {
+    enable = true;
+	# set the flake package
+	package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+	# set portal package so they are in sync
+	portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+  };
 
   # Configure console keymap
   console.keyMap = "pl2";
