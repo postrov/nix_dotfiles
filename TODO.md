@@ -25,3 +25,5 @@
   [ ] user chrome can be done with nix
 [ ] get rid of tabs in nix files (retab, etc.)
 [x] start dbus with hyprland (fixes problems with accessing secret service)
+[ ] configure wlogout
+
