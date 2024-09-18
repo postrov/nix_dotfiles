@@ -11,7 +11,8 @@
         export _JAVA_AWT_WM_NONREPARENTING=1
         export XCURSOR_SIZE=24
 
-        exec dbus-launch --sh-syntax --exit-with-session Hyprland
+        #exec dbus-launch --sh-syntax --exit-with-session Hyprland
+        exec Hyprland
       '';
       executable = true;
     };
