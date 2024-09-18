@@ -72,6 +72,7 @@
 
 
         # Workspaces
+        "$mod, TAB, workspace, previous"
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"
         "$mod, 3, workspace, 3"
@@ -109,12 +110,15 @@
         ", XF86Calculator, exec, qalculate-gtk"
         ", XF86Lock, exec, swaylock"
         ", XF86Tools, exec, alacritty --class .config-floating -e ~/.config/hypr/settings/settings.sh"
-    ];
+      ];
       bindm = [
         "$mod, mouse:272, movewindow"
         "$mod, mouse:273, resizewindow"
         "$mod ALT, mouse:272, resizewindow"
       ];
+	  exec-once = [
+	    "waybar -c ~/.config/waybar/waybar.config -s ~/.config/waybar/waybar-black.css"
+	  ];
     };
   };
 

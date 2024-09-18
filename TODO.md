@@ -13,7 +13,7 @@
   [x] set scaling to 1.0
   [ ] extract options (resolution)
   [ ] configure waybar
-    [ ] exec with hyprland
+    [x] exec with hyprland
     [ ] some glyphs missing with current font
 [x] git
   [x] configure email, user
