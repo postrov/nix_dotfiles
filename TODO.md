@@ -6,11 +6,15 @@
   [x] integrate zoxide: `zoxide init fish | source`
   [ ] make sure everything from regular dotfiles is reproduced
   [x] fix fish functions not running on first invocation
+  [x] fix bash (no fish) on login (just added .bash_profile to include .bashrc)
 [-] my font?
 [x] terminal config (kitty? foot?)
 [ ] hyprland..
-  [ ] set scaling to 1.0
+  [x] set scaling to 1.0
+  [ ] extract options (resolution)
   [ ] configure waybar
+    [ ] exec with hyprland
+    [ ] some glyphs missing with current font
 [x] git
   [x] configure email, user
   [x] add credential helper
@@ -18,3 +22,5 @@
 [ ] how to do ssh config?
 [ ] fzf
 [ ] firefox config
+  [ ] user chrome can be done with nix
+[ ] get rid of tabs in nix files (retab, etc.)

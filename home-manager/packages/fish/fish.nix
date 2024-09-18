@@ -14,6 +14,14 @@
           fi
       '';
     };
+    ".bash_profile" = {
+      text = ''
+          if [ -f ~/.bashrc ];
+          then
+              .  ~/.bashrc;
+          fi
+      '';
+    };
   };
   programs.fish = {
     enable = true;
