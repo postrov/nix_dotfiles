@@ -9,6 +9,7 @@
   programs.git = {
     enable = true;
     userName = "Paweł Ostrowski";
+    userEmail = "pasza@pasza.org";
 
       extraConfig = {
     # This makes git rebuild, which takes long time :(
