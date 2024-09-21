@@ -12,7 +12,7 @@
 [ ] hyprland..
   [x] set scaling to 1.0
   [ ] extract options (resolution)
-  [ ] configure waybar
+  [x] configure waybar
     [x] exec with hyprland
     [ ] some glyphs missing with current font
 [x] git
@@ -25,5 +25,9 @@
   [ ] user chrome can be done with nix
 [x] get rid of tabs in nix files (retab, etc.)
 [x] start dbus with hyprland (fixes problems with accessing secret service)
-[ ] configure wlogout
-[ ] starship conf
+[x] configure wlogout
+[-] starship conf
+[ ] dev environment (write own flake?)
+  [ ] go
+  [ ] ocaml
+
