@@ -97,7 +97,7 @@
         mkdir -p $argv[1]
         cd $argv[1]
       '';
-  
+
       yy = ''
         set tmp (mktemp -t "yazi-cwd.XXXXXX")
         yazi $argv --cwd-file="$tmp"
@@ -106,6 +106,31 @@
         end
         rm -f -- "$tmp"
       '';
+
+      fzv = {
+        argumentNames = "path";
+        body = ''
+          if [ -n "$path" -a -d "$path" ]
+              fd --type f --hidden --exclude .git --print0 . "$path"| fzf-tmux -p --read0 --print0 --exit-0 | xargs -r -0 nvim
+          else
+              fd --type f --hidden --exclude .git --print0 | fzf-tmux -p --read0 --print0 --exit-0 | xargs -r -0 nvim
+          end
+        '';
+      };
+
+      fzc = {
+        argumentNames = "path";
+        body = ''
+          if [ -n "$path" -a -d "$path" ]
+              set __TMP_CD (fd --type d --hidden --exclude .git --print0 . "$path"| fzf-tmux -p --read0 --print0 --exit-0)
+          else
+              set __TMP_CD (fd --type d --hidden --exclude .git --print0 | fzf-tmux -p --read0 --print0 --exit-0)
+          end
+          if [ -n "$__TMP_CD" ]
+              cd "$__TMP_CD"
+          end
+        '';
+      };
     };
     interactiveShellInit = ''
       zoxide init fish | source

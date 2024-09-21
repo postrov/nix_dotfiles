@@ -1,10 +1,10 @@
 [x] zoxide
 [x] neovim
   [x] how to symlink to dofile repo?
-[ ] better fish config
+[x] better fish config
   [x] reduce needless aliases
   [x] integrate zoxide: `zoxide init fish | source`
-  [ ] make sure everything from regular dotfiles is reproduced
+  [x] make sure everything from regular dotfiles is reproduced
   [x] fix fish functions not running on first invocation
   [x] fix bash (no fish) on login (just added .bash_profile to include .bashrc)
 [-] my font?
@@ -20,10 +20,10 @@
   [x] add credential helper
 [x] tmux
 [ ] how to do ssh config?
-[ ] fzf
+[x] fzf
 [ ] firefox config
   [ ] user chrome can be done with nix
 [x] get rid of tabs in nix files (retab, etc.)
 [x] start dbus with hyprland (fixes problems with accessing secret service)
 [ ] configure wlogout
-
+[ ] starship conf

@@ -65,6 +65,7 @@
       ../packages/fd/fd.nix
 #      ../packages/feh/feh.nix
       ../packages/fish/fish.nix
+      ../packages/fzf/fzf.nix
       ../packages/git/git.nix
       ../packages/helix/helix.nix
       ../packages/htop/htop.nix
