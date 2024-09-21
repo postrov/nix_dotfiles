@@ -28,6 +28,8 @@
 [x] configure wlogout
 [-] starship conf
 [ ] dev environment (write own flake?)
-  [ ] go
+  [x] go
   [ ] ocaml
-
+[ ] podman
+  [x] install podman itself
+  [ ] auto start user sock service
