@@ -28,8 +28,11 @@
 [x] configure wlogout
 [-] starship conf
 [ ] dev environment (write own flake?)
-  [x] go
-  [ ] ocaml
-[ ] podman
+  [x] go (in go-rest-api, including build and run)
+  [ ] cgo, static build
+  [x] ocaml
+  [ ] ocaml simpler, non nix-packaged libs (https://priver.dev/blog/ocaml/bye-opam-hello-nix/)
+[x] podman
   [x] install podman itself
-  [ ] auto start user sock service
+  [?] auto start user sock service (starts now, perhaps after initial `systemctl --user start podman.socket`)
+
