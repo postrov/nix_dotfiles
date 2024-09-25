@@ -64,6 +64,7 @@
       ../packages/eza/eza.nix
       ../packages/fd/fd.nix
 #      ../packages/feh/feh.nix
+      ../packages/firefox/firefox.nix
       ../packages/fish/fish.nix
       ../packages/fzf/fzf.nix
       ../packages/git/git.nix
@@ -75,6 +76,7 @@
 #      ../packages/megasync/megasync.nix
       ../packages/nap/nap.nix
       ../packages/neovim/neovim.nix
+      ../packages/nh/nh.nix
 #      ../packages/qbittorrent/qbittorrent.nix
 #      ../packages/rename/rename.nix
       ../packages/ripgrep/ripgrep.nix

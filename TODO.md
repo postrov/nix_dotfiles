@@ -35,4 +35,5 @@
 [x] podman
   [x] install podman itself
   [?] auto start user sock service (starts now, perhaps after initial `systemctl --user start podman.socket`)
+[ ] add options (enable podman, enable hyprland desktop etc.)
 
