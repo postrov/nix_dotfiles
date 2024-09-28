@@ -2,13 +2,13 @@
 
 {
   options = {
-    pasza-hyprland.enable = lib.mkEnableOption "enables hyprland desktop";
-    pasza-hyprland.monitor = lib.mkOption {
+    pasza.hyprland.enable = lib.mkEnableOption "enables hyprland desktop";
+    pasza.hyprland.monitor = lib.mkOption {
       type = lib.types.str;
       description = "hyprland monitor definition";
     };
   };
-  config = lib.mkIf config.pasza-hyprland.enable {
+  config = lib.mkIf config.pasza.hyprland.enable {
     home.file = {
       "bin/start_hypr.sh" = {
         text = ''
@@ -42,7 +42,7 @@
     wayland.windowManager.hyprland = {
       enable = true;
       settings = {
-        "monitor" = config.pasza-hyprland.monitor;
+        "monitor" = config.pasza.hyprland.monitor;
         "$mod" = "SUPER";
 
         input = {

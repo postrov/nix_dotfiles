@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 
 {
-  config = lib.mkIf config.pasza-hyprland.enable {
+  config = lib.mkIf config.pasza.hyprland.enable {
     programs.wlogout = {
       enable = true;
       layout = [

@@ -21,7 +21,7 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  pasza-hyprland = {
+  pasza.hyprland = {
     enable = true;
     monitor = ",1920x1080@60,auto,1";
   };
