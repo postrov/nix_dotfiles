@@ -9,10 +9,10 @@
   [x] fix bash (no fish) on login (just added .bash_profile to include .bashrc)
 [-] my font?
 [x] terminal config (kitty? foot?)
-[ ] hyprland..
+[x] hyprland..
   [x] set scaling to 1.0
   [x] set input layout to pl
-  [ ] extract options (resolution)
+  [x] extract options (resolution)
   [x] configure waybar
     [x] exec with hyprland
     [ ] some glyphs missing with current font
@@ -35,9 +35,11 @@
 [x] podman
   [x] install podman itself
   [?] auto start user sock service (starts now, perhaps after initial `systemctl --user start podman.socket`)
-[ ] add options (enable podman, enable hyprland desktop etc.)
+[x] add options
+  [-] enable podman (this is done in host/configuration.nix, while config.pasza is defined in home.nix, skip for now)
+  [x] enable hyprland desktop
 [ ] terminal colors with nix-colors (https://www.youtube.com/watch?v=jO2o0IN0LPE)
-[ ] dark mode?
+[x] dark mode?
   [x] dconf read /org/gnome/desktop/interface/color-scheme # => prefer-dark
   [x] firefox doesn't seem to care
   [x] gtk?

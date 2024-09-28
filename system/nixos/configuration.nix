@@ -46,7 +46,6 @@
     description = "Pawel Ostrowski";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-    #  thunderbird
       keyd
     ];
   };
