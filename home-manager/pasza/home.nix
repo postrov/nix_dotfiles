@@ -69,6 +69,7 @@
 #      ../packages/brave/brave.nix
 #      ../packages/direnv/direnv.nix
       ../packages/chromium/chromium.nix
+      ../packages/dbeaver/dbeaver.nix
       ../packages/erdtree/erdtree.nix
       ../packages/eza/eza.nix
       ../packages/fd/fd.nix
@@ -98,6 +99,7 @@
       ../packages/tree/tree.nix
 #      ../packages/vlc/vlc.nix
       ../packages/wezterm/wezterm.nix
+      ../packages/vscode/vscode.nix
       ../packages/yazi/yazi.nix
 #      ../packages/ytdlp/ytdlp.nix
       ../packages/zoxide/zoxide.nix

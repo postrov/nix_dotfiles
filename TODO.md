@@ -45,5 +45,6 @@
 [x] obsidian
 [x] slack
 [x] chromium
-[ ] vscode-fhs
-[ ] dbeaver-bin
+[x] vscode-fhs
+  [ ] perhaps configure
+[x] dbeaver-bin

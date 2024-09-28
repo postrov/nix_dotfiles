@@ -11,11 +11,15 @@
     userName = "Paweł Ostrowski";
     userEmail = "pasza@pasza.org";
 
-      extraConfig = {
-    # This makes git rebuild, which takes long time :(
-        credential.helper = "${
-            pkgs.git.override { withLibsecret = true; }
-          }/bin/git-credential-libsecret";
-        };
+    extraConfig = {
+      # This makes git rebuild, which takes long time :(
+      credential.helper = "${
+          pkgs.git.override {
+            withLibsecret = true;
+            # Skip long tests:
+            doInstallCheck = false;
+          }
+        }/bin/git-credential-libsecret";
       };
+    };
 }
