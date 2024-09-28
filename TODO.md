@@ -41,5 +41,7 @@
   [x] dconf read /org/gnome/desktop/interface/color-scheme # => prefer-dark
   [ ] firefox doesn't seem to care
   [ ] gtk?
-[ ] obsidian
+[x] obsidian
+[x] slack
+[x] chromium
 

@@ -60,6 +60,7 @@
       ../packages/bat/bat.nix
 #      ../packages/brave/brave.nix
 #      ../packages/direnv/direnv.nix
+      ../packages/chromium/chromium.nix
       ../packages/erdtree/erdtree.nix
       ../packages/eza/eza.nix
       ../packages/fd/fd.nix
@@ -83,6 +84,7 @@
       ../packages/ripgrep/ripgrep.nix
       ../packages/signal-desktop/signal-desktop.nix
       ../packages/sd/sd.nix
+      ../packages/slack/slack.nix
       ../packages/starship/starship.nix
       ../packages/tmux/tmux.nix
       ../packages/tree/tree.nix

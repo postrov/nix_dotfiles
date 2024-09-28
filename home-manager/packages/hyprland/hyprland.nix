@@ -51,7 +51,7 @@
         "workspace 6,class:^(org.telegram.desktop)$"
         "workspace 6,class:^(Signal)$"
         "workspace 1,class:^(DBeaver)$"
-        "workspace 5,class:^(Chromium)$"
+        "workspace 5,class:^(Chromium-browser)$"
       ];
 
       bind = [
