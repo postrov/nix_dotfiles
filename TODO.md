@@ -39,9 +39,11 @@
 [ ] terminal colors with nix-colors (https://www.youtube.com/watch?v=jO2o0IN0LPE)
 [ ] dark mode?
   [x] dconf read /org/gnome/desktop/interface/color-scheme # => prefer-dark
-  [ ] firefox doesn't seem to care
-  [ ] gtk?
+  [x] firefox doesn't seem to care
+  [x] gtk?
+  [ ] qt
 [x] obsidian
 [x] slack
 [x] chromium
-
+[ ] vscode-fhs
+[ ] dbeaver-bin

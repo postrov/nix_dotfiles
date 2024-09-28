@@ -43,6 +43,14 @@
     EDITOR = "vim";
   };
 
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Adwaita-dark";
+      package = pkgs.gnome.gnome-themes-extra;
+    };
+  };
+
   # I have seperated every package I want on my system within its own directory and .nix file
   # This makes my system extreamly modular as each file is responsible for
   # downloading the package I want and dealing with its own settings.

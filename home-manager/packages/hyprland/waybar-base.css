@@ -105,19 +105,19 @@ window#waybar.empty #window {
     margin-right: 0;
 }
 
-#custom-brave, 
-#custom-browser, 
-#custom-keybindings, 
-#custom-outlook, 
-#custom-filemanager, 
-#custom-teams, 
-#custom-chatgpt, 
-#custom-calculator, 
-#custom-windowsvm, 
-#custom-cliphist, 
-#custom-wallpaper, 
-#custom-settings, 
-#custom-wallpaper, 
+#custom-brave,
+#custom-browser,
+#custom-keybindings,
+#custom-outlook,
+#custom-filemanager,
+#custom-teams,
+#custom-chatgpt,
+#custom-calculator,
+#custom-windowsvm,
+#custom-cliphist,
+#custom-wallpaper,
+#custom-settings,
+#custom-wallpaper,
 #custom-waybarthemes {
     margin-right: 23px;
     font-size: 20px;
@@ -146,7 +146,7 @@ window#waybar.empty #window {
     margin: 0px 20px 0px 0px;
     padding:0px;
     font-size:20px;
-    color: @iconcolor;
+    color: @textcolor2;
 }
 
 #custom-updates {
@@ -187,7 +187,7 @@ window#waybar.empty #window {
     margin:0px;
     padding:0px;
     font-size:16px;
-    color:@iconcolor;
+    color:@textcolor2;
 }
 
 #memory {
@@ -202,7 +202,7 @@ window#waybar.empty #window {
     padding: 1px 10px 0px 10px;
     margin: 3px 15px 3px 0px;
     opacity:0.8;
-    border:3px solid @bordercolor;   
+    border:3px solid @bordercolor;
 }
 
 #pulseaudio {
