@@ -11,18 +11,18 @@
 [x] terminal config (kitty? foot?)
 [ ] hyprland..
   [x] set scaling to 1.0
+  [x] set input layout to pl
   [ ] extract options (resolution)
   [x] configure waybar
     [x] exec with hyprland
     [ ] some glyphs missing with current font
 [x] git
-  [x] configure email, user
-  [x] add credential helper
+
 [x] tmux
 [ ] how to do ssh config?
 [x] fzf
-[ ] firefox config
-  [ ] user chrome can be done with nix
+[x] firefox config
+  [x] user chrome can be done with nix
 [x] get rid of tabs in nix files (retab, etc.)
 [x] start dbus with hyprland (fixes problems with accessing secret service)
 [x] configure wlogout
@@ -36,4 +36,10 @@
   [x] install podman itself
   [?] auto start user sock service (starts now, perhaps after initial `systemctl --user start podman.socket`)
 [ ] add options (enable podman, enable hyprland desktop etc.)
+[ ] terminal colors with nix-colors (https://www.youtube.com/watch?v=jO2o0IN0LPE)
+[ ] dark mode?
+  [x] dconf read /org/gnome/desktop/interface/color-scheme # => prefer-dark
+  [ ] firefox doesn't seem to care
+  [ ] gtk?
+[ ] obsidian
 

@@ -26,11 +26,22 @@
     waybar
     wlogout
   ];
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+    };
+  };
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
       "monitor" = ",1920x1080@60,auto,1";
       "$mod" = "SUPER";
+
+      input = {
+        "kb_layout" = "pl";
+        #"kb_variant" = ",qwerty";
+        #"kb_options" = "grp:alt_shift_toggle";
+      };
 
       bind = [
         "$mod, RETURN, exec, kitty"

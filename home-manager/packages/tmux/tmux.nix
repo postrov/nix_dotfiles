@@ -17,15 +17,16 @@
 
     baseIndex = 1;
     prefix = "C-b";
+    mouse = true;
 
     plugins = with pkgs; [
       # modern-tmux-theme
       tmuxPlugins.catppuccin
-      tmuxPlugins.sensible
+      # the tmux nix module seems to start with tmux-sensible anyway, don't apply twice
+      #tmuxPlugins.sensible
     ];
 
     extraConfig = ''
-      set -g mouse
       unbind-key -T copy-mode-vi MouseDragEnd1Pane
 
       # pane movement
@@ -50,7 +51,6 @@
       bind l select-pane -R
 
       # Start windows and panes at 1, not 0
-      set -g base-index 1
       set -g pane-base-index 1
       set-window-option -g pane-base-index 1
       set-option -g renumber-windows on
@@ -59,8 +59,8 @@
       set -g allow-passthrough on
       set -ga update-environment TERM
       set -ga update-environment TERM_PROGRAM
-    # TODO: perhaps take from variable
-    set -g default-command bash
+      # TODO: perhaps take from variable
+      set -g default-command bash
     '';
   };
 }
