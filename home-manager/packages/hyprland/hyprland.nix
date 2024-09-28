@@ -43,6 +43,17 @@
         #"kb_options" = "grp:alt_shift_toggle";
       };
 
+      windowrulev2 = [
+        "float,class:(.config-floating)"
+        "workspace 3,class:^(firefox)$"
+        "workspace 4,class:^(Slack)$"
+        "workspace 5,class:^(Kumospace)$"
+        "workspace 6,class:^(org.telegram.desktop)$"
+        "workspace 6,class:^(Signal)$"
+        "workspace 1,class:^(DBeaver)$"
+        "workspace 5,class:^(Chromium)$"
+      ];
+
       bind = [
         "$mod, RETURN, exec, kitty"
         "$mod, SPACE, exec, rofi -show drun -replace"

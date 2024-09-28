@@ -79,6 +79,7 @@
       ../packages/nh/nh.nix
 #      ../packages/qbittorrent/qbittorrent.nix
 #      ../packages/rename/rename.nix
+      ../packages/obsidian/obsidian.nix
       ../packages/ripgrep/ripgrep.nix
       ../packages/signal-desktop/signal-desktop.nix
       ../packages/sd/sd.nix
