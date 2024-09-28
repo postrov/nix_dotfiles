@@ -50,3 +50,5 @@
 [x] vscode-fhs
   [ ] perhaps configure
 [x] dbeaver-bin
+[ ] bluetooth
+

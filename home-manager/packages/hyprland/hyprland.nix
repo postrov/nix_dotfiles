@@ -4,8 +4,8 @@
   options = {
     pasza.hyprland.enable = lib.mkEnableOption "enables hyprland desktop";
     pasza.hyprland.monitor = lib.mkOption {
-      type = lib.types.str;
-      description = "hyprland monitor definition";
+      type = with lib.types; listOf str;
+      description = "hyprland monitor definitions";
     };
   };
   config = lib.mkIf config.pasza.hyprland.enable {
