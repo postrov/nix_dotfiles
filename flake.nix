@@ -1,20 +1,20 @@
 {
- description = "Pasza's home"; #You can change this to whatever
+  description = "Pasza's home"; #You can change this to whatever
 
- inputs = {
-   # Nixpkgs
-   nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+  inputs = {
+    # Nixpkgs
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
 
-   # Home manager
-   home-manager.url = "github:nix-community/home-manager/release-24.05";
-   home-manager.inputs.nixpkgs.follows = "nixpkgs"; # This line makes sure that "nixpkgs.url" and "home-manager.url" stay in sync and can work together
+    # Home manager
+    home-manager.url = "github:nix-community/home-manager/release-24.05";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs"; # This line makes sure that "nixpkgs.url" and "home-manager.url" stay in sync and can work together
 
-   # Hyprland
-   hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    # Hyprland
+    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
  };
 
- outputs = { self, nixpkgs, home-manager, ... }@inputs: # <- this `@inputs` will expose the block of code below, to the inputs that you set above.
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: # <- this `@inputs` will expose the block of code below, to the inputs that you set above.
 
   # This `let` statement allows you to set variables that you can use in the following block of code (hence the word `in`).
   # Setting variables here will allow you to pass them into your configuration.nix and home.nix files
@@ -45,14 +45,14 @@
    nixosConfigurations = {
      nixos = nixpkgs.lib.nixosSystem {
        specialArgs = {
-          # `inherit` is used to pass the variables set in the above "let" statement into our configuration.nix file below
-          inherit inputs;
-          inherit system;
-          inherit timezone;
-          inherit locale;
-   };
-        # Our main nixos configuration file
-        # This is the file where we compartmentalize the changes we want to make on a system level
+         # `inherit` is used to pass the variables set in the above "let" statement into our configuration.nix file below
+         inherit inputs;
+         inherit system;
+         inherit timezone;
+         inherit locale;
+       };
+       # Our main nixos configuration file
+       # This is the file where we compartmentalize the changes we want to make on a system level
        modules = [
          ./system/nixos/configuration.nix
        ];
@@ -60,14 +60,14 @@
 
      storage = nixpkgs.lib.nixosSystem {
        specialArgs = {
-          # `inherit` is used to pass the variables set in the above "let" statement into our configuration.nix file below
-          inherit inputs;
-          inherit system;
-          inherit timezone;
-          inherit locale;
-   };
-        # Our main nixos configuration file
-        # This is the file where we compartmentalize the changes we want to make on a system level
+         # `inherit` is used to pass the variables set in the above "let" statement into our configuration.nix file below
+         inherit inputs;
+         inherit system;
+         inherit timezone;
+         inherit locale;
+       };
+       # Our main nixos configuration file
+       # This is the file where we compartmentalize the changes we want to make on a system level
        modules = [
          ./system/storage/configuration.nix
        ];
@@ -80,25 +80,25 @@
      "pasza@nixos" = home-manager.lib.homeManagerConfiguration {
        pkgs = nixpkgs.legacyPackages.${system}; # Home-manager requires 'pkgs' instance
        extraSpecialArgs = {
-          # `inherit` is used to pass the variables set in the above "let" statement into our home.nix file below
-          inherit inputs;
-   };
+         # `inherit` is used to pass the variables set in the above "let" statement into our home.nix file below
+         inherit inputs;
+       };
        # > Our main home-manager configuration file <
        modules = [
-           ./home-manager/pasza/home.nix
-           ];
+         ./home-manager/pasza/home.nix
+       ];
      };
 
      "storage@storage" = home-manager.lib.homeManagerConfiguration {
        pkgs = nixpkgs.legacyPackages.${system}; # Home-manager requires 'pkgs' instance
        extraSpecialArgs = {
-          # `inherit` is used to pass the variables set in the above "let" statement into our home.nix file below
-          inherit inputs;
-   };
+         # `inherit` is used to pass the variables set in the above "let" statement into our home.nix file below
+         inherit inputs;
+       };
        # > Our main home-manager configuration file <
        modules = [
-           ./home-manager/storage/home.nix
-           ];
+         ./home-manager/storage/home.nix
+       ];
      };
    };
  };

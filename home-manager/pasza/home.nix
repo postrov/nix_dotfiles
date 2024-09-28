@@ -21,6 +21,11 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  pasza-hyprland = {
+    enable = true;
+    monitor = ",1920x1080@60,auto,1";
+  };
+
   fonts.fontconfig.enable = true;
   home.packages = [
     (pkgs.nerdfonts.override { fonts = [ "Hack" ]; }) # TODO: more?

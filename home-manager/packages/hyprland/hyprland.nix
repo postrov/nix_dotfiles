@@ -1,6 +1,14 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
+  options = {
+    pasza-hyprland.enable = lib.mkEnableOption "enables hyprland desktop";
+    pasza-hyprland.monitor = lib.mkOption {
+      type = lib.types.str;
+      description = "hyprland monitor definition";
+    };
+  };
+  config = lib.mkIf config.pasza-hyprland.enable {
   home.file = {
     "bin/start_hypr.sh" = {
       text = ''
@@ -34,13 +42,11 @@
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
-      "monitor" = ",1920x1080@60,auto,1";
+      "monitor" = config.pasza-hyprland.monitor;
       "$mod" = "SUPER";
 
       input = {
         "kb_layout" = "pl";
-        #"kb_variant" = ",qwerty";
-        #"kb_options" = "grp:alt_shift_toggle";
       };
 
       windowrulev2 = [
@@ -190,5 +196,6 @@
         "keybind" = "r";
       }
     ];
+  };
   };
 }
