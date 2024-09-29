@@ -33,6 +33,8 @@
       swaylock
       waybar
       wlogout
+      wl-clipboard
+      xdg-utils
     ];
     dconf.settings = {
       "org/gnome/desktop/interface" = {

@@ -52,7 +52,7 @@
 [x] dbeaver-bin
 [x] bluetooth
 [ ] cliphist
-  [ ] wl-clipboard
+  [x] wl-clipboard
   [ ] ~/.config/hypr/scripts/xdg.sh (set up clipboard watchers)
-  [ ] xdg-utils
+  [x] xdg-utils
 
