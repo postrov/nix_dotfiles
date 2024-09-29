@@ -290,7 +290,6 @@ window#waybar.empty #window {
 
 #tray {
     /* background-color: @workspacesbackground1; */
-    background-color: rgba(0, 0, 0, 0.0);
 }
 
 #tray > .passive {
@@ -299,7 +298,7 @@ window#waybar.empty #window {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: @workspacesbackground2;
+    /* background-color: @workspacesbackground2; */
 }
 
 label:focus {
