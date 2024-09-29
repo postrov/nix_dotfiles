@@ -111,10 +111,10 @@
 
   programs.hyprland = {
     enable = true;
-	# set the flake package
-	package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-	# set portal package so they are in sync
-	portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+    # set the flake package
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    # set portal package so they are in sync
+    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
   };
 
   # Configure console keymap
@@ -138,6 +138,13 @@
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
+
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
+
+  services.blueman.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;

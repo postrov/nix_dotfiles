@@ -50,5 +50,9 @@
 [x] vscode-fhs
   [ ] perhaps configure
 [x] dbeaver-bin
-[ ] bluetooth
+[x] bluetooth
+[ ] cliphist
+  [ ] wl-clipboard
+  [ ] ~/.config/hypr/scripts/xdg.sh (set up clipboard watchers)
+  [ ] xdg-utils
 
