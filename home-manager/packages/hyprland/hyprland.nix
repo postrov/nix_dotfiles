@@ -9,6 +9,10 @@
     };
   };
   config = lib.mkIf config.pasza.hyprland.enable {
+    xdg.configFile."hypr/scripts" = {
+      source = ./scripts;
+      recursive = true;
+    };
     home.file = {
       "bin/start_hypr.sh" = {
         text = ''
@@ -28,6 +32,7 @@
     home.packages = with pkgs; [
       brightnessctl
       cliphist
+      libnotify
       pywal
       rofi-wayland
       swaylock
@@ -87,7 +92,8 @@
           "$mod SHIFT, down, resizeactive, 0 100"
 
           # Actions:
-          #"$mod", PRINT, exec, ~/.config/hypr/scripts/screenshot.sh"
+          "$mod, PRINT, exec, ~/.config/hypr/scripts/screenshot.sh"
+
           "$mod CTRL, Q, exec, wlogout"
           #"$mod SHIFT, W, exec, ~/.config/hypr/scripts/wallpaper.sh"
           #"$mod CTRL, W, exec, ~/.config/hypr/scripts/wallpaper.sh select"
@@ -97,7 +103,7 @@
           #"$mod SHIFT, R, exec, ~/.config/hypr/scripts/loadconfig.sh"
           #"$mod CTRL, F, exec, ~/.config/scripts/filemanager.sh"
           #"$mod CTRL, C, exec, ~/.config/scripts/cliphist.sh"
-          #"$mod, V, exec, ~/.config/scripts/cliphist.sh"
+          "$mod, V, exec, cliphist list | rofi -dmenu -replace"
           #"$mod CTRL, T, exec, ~/.config/waybar/themeswitcher.sh"
           #"$mod CTRL, S, exec, alacritty --class .config-floating -e ~/.config/hypr/settings/settings.sh"
 
@@ -149,6 +155,8 @@
         ];
       exec-once = [
         "waybar -c ~/.config/waybar/waybar.config -s ~/.config/waybar/waybar-black.css"
+        "wl-paste --type image --watch cliphist store # Stores only image data"
+        "wl-paste --type text --watch cliphist store # Stores only text data"
       ];
       };
     };
@@ -156,6 +164,7 @@
 
   };
   imports = [
+    ./dunst.nix
     ./waybar.nix
     ./wlogout.nix
   ];

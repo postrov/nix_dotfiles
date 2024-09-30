@@ -51,8 +51,10 @@
   [ ] perhaps configure
 [x] dbeaver-bin
 [x] bluetooth
-[ ] cliphist
+[x] cliphist
   [x] wl-clipboard
-  [ ] ~/.config/hypr/scripts/xdg.sh (set up clipboard watchers)
   [x] xdg-utils
-
+  [-] display preview (nwg-clipman can do it, maybe write own)
+[x] screenshots (grim, ~/tmp/scr.sh)
+[x] notifications (notify-send - libnotify, daemon - dunst/mako)
+[ ] FIX: rofi complaining about missing wallpaper
