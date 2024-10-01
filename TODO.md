@@ -29,7 +29,7 @@
 [-] starship conf
 [ ] dev environment (write own flake?)
   [x] go (in go-rest-api, including build and run)
-  [ ] cgo, static build
+  [ ] cgo, static build, musl (https://nixos.wiki/Go#Using_cgo_on_NixOS)
   [x] ocaml
   [ ] ocaml simpler, non nix-packaged libs (https://priver.dev/blog/ocaml/bye-opam-hello-nix/)
 [x] podman
