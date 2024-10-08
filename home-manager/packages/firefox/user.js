@@ -258,6 +258,8 @@ user_pref("permissions.default.desktop-notification", 0);
 
 // PREF: enable container tabs
 user_pref("privacy.userContext.enabled", true);
+
+user_pref("media.ffmpeg.vaapi.enabled", true);
 /****************************************************************************
  * SECTION: SMOOTHFOX                                                       *
 ****************************************************************************/

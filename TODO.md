@@ -58,3 +58,4 @@
 [x] screenshots (grim, ~/tmp/scr.sh)
 [x] notifications (notify-send - libnotify, daemon - dunst/mako)
 [ ] FIX: rofi complaining about missing wallpaper
+[ ] todo.sh setup

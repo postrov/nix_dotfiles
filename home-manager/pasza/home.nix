@@ -48,6 +48,7 @@
 
   home.sessionVariables = {
     EDITOR = "vim";
+    VDPAU_DRIVER = "radeonsi";
   };
 
   gtk = {
@@ -55,6 +56,17 @@
     theme = {
       name = "Adwaita-dark";
       package = pkgs.gnome.gnome-themes-extra;
+    };
+  };
+
+
+  xdg.mime.enable = true; # Get xdg-utils, etc.
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "x-scheme-handler/http" = ["firefox.desktop"];
+      "x-scheme-handler/https" = ["firefox.desktop"];
+      "text/html" = ["firefox.desktop"];
     };
   };
 

@@ -33,13 +33,13 @@
       brightnessctl
       cliphist
       libnotify
+      mpv
       pywal
       rofi-wayland
       swaylock
       waybar
       wlogout
       wl-clipboard
-      xdg-utils
     ];
     dconf.settings = {
       "org/gnome/desktop/interface" = {
@@ -103,7 +103,7 @@
           #"$mod SHIFT, R, exec, ~/.config/hypr/scripts/loadconfig.sh"
           #"$mod CTRL, F, exec, ~/.config/scripts/filemanager.sh"
           #"$mod CTRL, C, exec, ~/.config/scripts/cliphist.sh"
-          "$mod, V, exec, cliphist list | rofi -dmenu -replace"
+          "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
           #"$mod CTRL, T, exec, ~/.config/waybar/themeswitcher.sh"
           #"$mod CTRL, S, exec, alacritty --class .config-floating -e ~/.config/hypr/settings/settings.sh"
 
@@ -165,6 +165,7 @@
   };
   imports = [
     ./dunst.nix
+    ./mpv.nix
     ./waybar.nix
     ./wlogout.nix
   ];
