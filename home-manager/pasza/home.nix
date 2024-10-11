@@ -96,6 +96,7 @@
       ../packages/firefox/firefox.nix
       ../packages/fish/fish.nix
       ../packages/fzf/fzf.nix
+      ../packages/gcp/gcp.nix
       ../packages/git/git.nix
       ../packages/helix/helix.nix
       ../packages/htop/htop.nix

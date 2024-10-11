@@ -38,4 +38,6 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  # udev rules for k380
+  hardware.logitech.wireless.enable = true;
 }
