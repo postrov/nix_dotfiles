@@ -4,6 +4,7 @@
   inputs = {
     # Nixpkgs
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     # Home manager
     home-manager.url = "github:nix-community/home-manager/release-24.05";
@@ -36,6 +37,14 @@
         LC_PAPER = "pl_PL.UTF-8";
         LC_TELEPHONE = "pl_PL.UTF-8";
         LC_TIME = "pl_PL.UTF-8";
+      };
+      nixpkgsConfig = {
+        inherit system;
+        config.allowUnfree = true;
+      };
+      my-nixpkgs.from = {
+        stable = import inputs.nixpkgs nixpkgsConfig;
+        unstable = import inputs.nixpkgs-unstable nixpkgsConfig;
       };
   in
 
@@ -82,6 +91,7 @@
        extraSpecialArgs = {
          # `inherit` is used to pass the variables set in the above "let" statement into our home.nix file below
          inherit inputs;
+         inherit my-nixpkgs;
        };
        # > Our main home-manager configuration file <
        modules = [

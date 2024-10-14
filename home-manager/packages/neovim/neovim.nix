@@ -1,9 +1,12 @@
-{ config, pkgs, ... }:
+{ config, pkgs, ... }@inputs:
 
+let
+  unstable = inputs.my-nixpkgs.from.unstable;
+in
 {
 
   home.packages = with pkgs; [
-    neovim
+    unstable.neovim
   ];
 
   programs.neovim = {
