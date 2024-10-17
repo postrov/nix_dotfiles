@@ -29,8 +29,10 @@
   };
 
   fonts.fontconfig.enable = true;
-  home.packages = [
+  home.packages = with pkgs; [
     (pkgs.nerdfonts.override { fonts = [ "Hack" ]; }) # TODO: more?
+    unzip
+    zip
   ];
 
   nixpkgs = {
@@ -87,6 +89,7 @@
       ../packages/bat/bat.nix
 #      ../packages/brave/brave.nix
 #      ../packages/direnv/direnv.nix
+      ../packages/beekeeper/beekeeper.nix
       ../packages/chromium/chromium.nix
       ../packages/dbeaver/dbeaver.nix
       ../packages/erdtree/erdtree.nix

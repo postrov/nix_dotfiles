@@ -64,6 +64,7 @@
           "workspace 6,class:^(org.telegram.desktop)$"
           "workspace 6,class:^(Signal)$"
           "workspace 1,class:^(DBeaver)$"
+          "workspace 1,class:^(beekeeper-studio)$"
           "workspace 5,class:^(Chromium-browser)$"
         ];
 
