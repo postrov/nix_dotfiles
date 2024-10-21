@@ -103,6 +103,7 @@
       ../packages/git/git.nix
       ../packages/helix/helix.nix
       ../packages/htop/htop.nix
+      ../packages/httpie/httpie.nix
       ../packages/hyprland/hyprland.nix
       ../packages/kitty/kitty.nix
       ../packages/lazygit/lazygit.nix
@@ -113,6 +114,7 @@
 #      ../packages/qbittorrent/qbittorrent.nix
 #      ../packages/rename/rename.nix
       ../packages/obsidian/obsidian.nix
+      ../packages/postman/postman.nix
       ../packages/ripgrep/ripgrep.nix
       ../packages/signal-desktop/signal-desktop.nix
       ../packages/sd/sd.nix
