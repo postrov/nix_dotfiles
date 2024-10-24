@@ -31,6 +31,7 @@
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
     (pkgs.nerdfonts.override { fonts = [ "Hack" ]; }) # TODO: more?
+    btop
     unzip
     zip
   ];
@@ -92,6 +93,7 @@
       ../packages/beekeeper/beekeeper.nix
       ../packages/chromium/chromium.nix
       ../packages/dbeaver/dbeaver.nix
+      ../packages/dev-tools/dev-tools.nix
       ../packages/erdtree/erdtree.nix
       ../packages/eza/eza.nix
       ../packages/fd/fd.nix
