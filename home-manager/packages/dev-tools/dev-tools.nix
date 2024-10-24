@@ -6,6 +6,7 @@ in
 {
   home.packages = with unstable; [
     # c
+    clang
     clang-tools
     cmake
     codespell
