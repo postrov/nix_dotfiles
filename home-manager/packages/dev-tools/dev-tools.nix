@@ -40,6 +40,7 @@ in
     nodePackages.pnpm
     nodePackages.typescript
     nodePackages.typescript-language-server
+    emmet-language-server
 
     # ocaml
     ocamlPackages.ocamlformat
