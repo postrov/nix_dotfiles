@@ -5,13 +5,21 @@ let
 in
 {
   home.packages = with unstable; [
+    # c
+    clang-tools
+    cmake
+    codespell
+    conan
+    cppcheck
+    doxygen
+    gtest
+    lcov
+    # vcpkg
+    # vcpkg-tool
+
     # general
     just
     pkg-config
-
-    # nix
-    nixd
-    alejandra
 
     # go
     go_1_23
@@ -19,6 +27,13 @@ in
     golangci-lint
     goimports-reviser
 		gotools
+
+    # lua
+    lua-language-server
+
+    # nix
+    nixd
+    alejandra
 
     # nodejs
     nodejs
@@ -33,18 +48,6 @@ in
     ocamlPackages.ocamlformat-rpc-lib # Nicely formatted types on hover
     ocamlPackages.utop
     dune_3
-
-    # c
-    clang-tools
-    cmake
-    codespell
-    conan
-    cppcheck
-    doxygen
-    gtest
-    lcov
-    # vcpkg
-    # vcpkg-tool
 
     # rust
     cargo
