@@ -15,6 +15,7 @@ in
     doxygen
     gtest
     lcov
+    gnumake
     # vcpkg
     # vcpkg-tool
 
@@ -50,6 +51,12 @@ in
     ocamlPackages.ocamlformat-rpc-lib # Nicely formatted types on hover
     ocamlPackages.utop
     dune_3
+
+    # python
+    python3
+    mypy
+    pyright
+    ruff
 
     # rust
     cargo

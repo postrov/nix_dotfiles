@@ -54,6 +54,9 @@
 
         input = {
           "kb_layout" = "pl";
+          "touchpad" = {
+            "disable_while_typing" = true;
+          };
         };
 
         windowrulev2 = [
