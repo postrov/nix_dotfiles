@@ -11,6 +11,7 @@
   system,
   timezone,
   username,
+  specialArgs,
   ...
 }:
 
@@ -61,7 +62,7 @@
   networking.networkmanager.enable = true;
 
   # Set your time zone.
-  time.timeZone = "Europe/Warsaw";
+  time.timeZone = specialArgs.timezone;
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -200,6 +201,11 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
   services.gnome.gnome-keyring.enable = true;
+  # This should change timezone based on localization, but does not work
+  # as there is some problem with mozilla-owned data that's no longer available
+  # (geoclue2 provider)
+  # services.localtimed.enable = true;
+  services.tlp.enable = true;
 
   # Enable common container config files in /etc/containers
   virtualisation.containers.enable = true;

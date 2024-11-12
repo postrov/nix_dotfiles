@@ -25,7 +25,8 @@
   let
     # ---- System Settings ---- #
       system = "x86_64-linux";
-      timezone = "Europe/Warsaw";
+      # timezone = "Europe/Warsaw";
+      timezone = "Asia/Bangkok";
       locale = "en_US.UTF-8";
       extraLocaleSettings = {
         LC_ADDRESS = "pl_PL.UTF-8";
