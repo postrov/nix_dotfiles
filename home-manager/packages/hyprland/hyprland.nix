@@ -170,6 +170,7 @@
   imports = [
     ./dunst.nix
     ./mpv.nix
+    ./swaylock.nix
     ./waybar.nix
     ./wlogout.nix
   ];
