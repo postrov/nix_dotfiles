@@ -59,9 +59,10 @@ in
     ruff
 
     # rust
-    cargo
     rustc
     rust-analyzer
+    clippy
+    cargo
   ];
 
   programs.neovim = {
