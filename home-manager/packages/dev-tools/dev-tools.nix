@@ -30,7 +30,11 @@ in
     goimports-reviser
 		gotools
 
+    # json
+    jq
+
     # lua
+    lua
     lua-language-server
 
     # nix
