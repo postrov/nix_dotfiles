@@ -1,8 +1,8 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ # parameters passed in from ~/.dotfiles/flake.nix. These were passed in via `inherit`
+{
+  # parameters passed in from ~/.dotfiles/flake.nix. These were passed in via `inherit`
   config,
   hostname,
   inputs,
@@ -13,17 +13,18 @@
   username,
   specialArgs,
   ...
-}:
-
-{
-  imports =
-    [ # Copy /etc/nixos/hardware-configuration.nix to ./system/nixos
-      ./hardware-configuration.nix
-    ];
+}: {
+  imports = [
+    # Copy /etc/nixos/hardware-configuration.nix to ./system/nixos
+    ./hardware-configuration.nix
+  ];
 
   # Enable Flakes to be used on the system
-  nix.package = pkgs.nixFlakes;
-  nix.extraOptions = '' experimental-features = nix-command flakes '';
+  # nix.package = pkgs.nixFlakes;
+  nix.package = pkgs.nixVersions.stable;
+  # error: 'nixFlakes' has been renamed to/replaced by 'nixVersions.stable'
+
+  nix.extraOptions = ''experimental-features = nix-command flakes '';
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -45,7 +46,7 @@
   users.users.pasza = {
     isNormalUser = true;
     description = "Pawel Ostrowski";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
       keyd
     ];
@@ -155,7 +156,6 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
-
 
   # Install firefox.
   programs.firefox.enable = true;

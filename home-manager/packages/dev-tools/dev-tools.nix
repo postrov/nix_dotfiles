@@ -67,6 +67,10 @@ in
     rust-analyzer
     clippy
     cargo
+
+    # zig
+    zig
+    zls
   ];
 
   programs.neovim = {

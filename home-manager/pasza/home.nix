@@ -1,4 +1,5 @@
-{ # parameters passed in from ~/.dotfiles/flake.nix. These were passed in via `inherit`
+{
+  # parameters passed in from ~/.dotfiles/flake.nix. These were passed in via `inherit`
   browser,
   config,
   editor,
@@ -10,9 +11,7 @@
   username,
   ...
 }:
-
 # https://nix-community.github.io/home-manager/options.xhtml
-
 {
   home.username = "pasza";
   home.homeDirectory = "/home/pasza";
@@ -30,7 +29,7 @@
 
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
-    (pkgs.nerdfonts.override { fonts = [ "Hack" ]; }) # TODO: more?
+    (pkgs.nerdfonts.override {fonts = ["Hack"];}) # TODO: more?
     btop
     unzip
     zip
@@ -39,14 +38,14 @@
   nixpkgs = {
     config = {
       allowUnfree = true;
-      allowUnfreePredicate = (_: true);
+      allowUnfreePredicate = _: true;
     };
   };
 
   # Below didn't work for me, at least in shell
   systemd.user.sessionVariables = {
     EDITOR = "vim";
-#    TERM = "fish";
+    #    TERM = "fish";
   };
 
   home.sessionVariables = {
@@ -58,10 +57,9 @@
     enable = true;
     theme = {
       name = "Adwaita-dark";
-      package = pkgs.gnome.gnome-themes-extra;
+      package = pkgs.gnome-themes-extra;
     };
   };
-
 
   xdg.mime.enable = true; # Get xdg-utils, etc.
   xdg.mimeApps = {
@@ -87,53 +85,51 @@
   # ~/.dotfiles/home-manager/packages/template.nix is the template I use when configuring a new package
 
   imports = [
-      ../packages/bat/bat.nix
-#      ../packages/brave/brave.nix
-#      ../packages/direnv/direnv.nix
-      ../packages/beekeeper/beekeeper.nix
-      ../packages/chromium/chromium.nix
-      ../packages/dbeaver/dbeaver.nix
-      ../packages/dev-tools/dev-tools.nix
-      ../packages/erdtree/erdtree.nix
-      ../packages/eza/eza.nix
-      ../packages/fd/fd.nix
-#      ../packages/feh/feh.nix
-      ../packages/firefox/firefox.nix
-      ../packages/fish/fish.nix
-      ../packages/fzf/fzf.nix
-      ../packages/gcp/gcp.nix
-      ../packages/git/git.nix
-      ../packages/helix/helix.nix
-      ../packages/htop/htop.nix
-      ../packages/httpie/httpie.nix
-      ../packages/hyprland/hyprland.nix
-      ../packages/kitty/kitty.nix
-      ../packages/lazygit/lazygit.nix
-#      ../packages/megasync/megasync.nix
-      ../packages/nap/nap.nix
-      ../packages/neovim/neovim.nix
-      ../packages/nh/nh.nix
-#      ../packages/qbittorrent/qbittorrent.nix
-#      ../packages/rename/rename.nix
-      ../packages/obsidian/obsidian.nix
-      ../packages/postman/postman.nix
-      ../packages/ripgrep/ripgrep.nix
-      ../packages/signal-desktop/signal-desktop.nix
-      ../packages/sd/sd.nix
-      ../packages/slack/slack.nix
-      ../packages/starship/starship.nix
-      ../packages/tmux/tmux.nix
-      ../packages/tree/tree.nix
-#      ../packages/vlc/vlc.nix
-      ../packages/wezterm/wezterm.nix
-      ../packages/vscode/vscode.nix
-      ../packages/yazi/yazi.nix
-#      ../packages/ytdlp/ytdlp.nix
-      ../packages/zoxide/zoxide.nix
+    ../packages/bat/bat.nix
+    #      ../packages/brave/brave.nix
+    #      ../packages/direnv/direnv.nix
+    ../packages/beekeeper/beekeeper.nix
+    ../packages/chromium/chromium.nix
+    ../packages/dbeaver/dbeaver.nix
+    ../packages/dev-tools/dev-tools.nix
+    ../packages/erdtree/erdtree.nix
+    ../packages/eza/eza.nix
+    ../packages/fd/fd.nix
+    #      ../packages/feh/feh.nix
+    ../packages/firefox/firefox.nix
+    ../packages/fish/fish.nix
+    ../packages/fzf/fzf.nix
+    ../packages/gcp/gcp.nix
+    ../packages/git/git.nix
+    ../packages/helix/helix.nix
+    ../packages/htop/htop.nix
+    ../packages/httpie/httpie.nix
+    ../packages/hyprland/hyprland.nix
+    ../packages/kitty/kitty.nix
+    ../packages/lazygit/lazygit.nix
+    #      ../packages/megasync/megasync.nix
+    ../packages/nap/nap.nix
+    ../packages/neovim/neovim.nix
+    ../packages/nh/nh.nix
+    #      ../packages/qbittorrent/qbittorrent.nix
+    #      ../packages/rename/rename.nix
+    ../packages/obsidian/obsidian.nix
+    ../packages/postman/postman.nix
+    ../packages/ripgrep/ripgrep.nix
+    ../packages/signal-desktop/signal-desktop.nix
+    ../packages/sd/sd.nix
+    ../packages/slack/slack.nix
+    ../packages/starship/starship.nix
+    ../packages/tmux/tmux.nix
+    ../packages/tree/tree.nix
+    #      ../packages/vlc/vlc.nix
+    ../packages/wezterm/wezterm.nix
+    ../packages/vscode/vscode.nix
+    ../packages/yazi/yazi.nix
+    #      ../packages/ytdlp/ytdlp.nix
+    ../packages/zoxide/zoxide.nix
 
-#      ../scripts/youtube_channel_archiver/youtube_channel_archiver.nix
-#      ../scripts/single_song_downloader/single_song_downloader.nix
-];
-
+    #      ../scripts/youtube_channel_archiver/youtube_channel_archiver.nix
+    #      ../scripts/single_song_downloader/single_song_downloader.nix
+  ];
 }
-
