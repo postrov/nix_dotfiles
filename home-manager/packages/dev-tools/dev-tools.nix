@@ -1,9 +1,10 @@
-{ config, pkgs, ... }@inputs:
-
-let
-  unstable = inputs.my-nixpkgs.from.unstable;
-in
 {
+  config,
+  pkgs,
+  ...
+} @ inputs: let
+  unstable = inputs.my-nixpkgs.from.unstable;
+in {
   home.packages = with unstable; [
     # c
     clang
@@ -16,6 +17,11 @@ in
     gtest
     lcov
     gnumake
+
+    # common lisp
+    sbcl
+    rlwrap
+
     # vcpkg
     # vcpkg-tool
 
@@ -28,7 +34,7 @@ in
     gopls
     golangci-lint
     goimports-reviser
-		gotools
+    gotools
 
     # json
     jq
