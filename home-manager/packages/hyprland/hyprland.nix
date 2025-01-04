@@ -1,6 +1,9 @@
-{ config, pkgs, lib, ... }:
-
 {
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
   options = {
     pasza.hyprland.enable = lib.mkEnableOption "enables hyprland desktop";
     pasza.hyprland.monitor = lib.mkOption {
@@ -111,7 +114,6 @@
           #"$mod CTRL, T, exec, ~/.config/waybar/themeswitcher.sh"
           #"$mod CTRL, S, exec, alacritty --class .config-floating -e ~/.config/hypr/settings/settings.sh"
 
-
           # Workspaces
           "$mod, TAB, workspace, previous"
           "$mod, 1, workspace, 1"
@@ -140,8 +142,8 @@
           # Fn keys
           ", XF86MonBrightnessUp, exec, brightnessctl -q s +10%"
           ", XF86MonBrightnessDown, exec, brightnessctl -q s 10%-"
-          ", XF86AudioRaiseVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ +5%"
-          ", XF86AudioLowerVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ -5%"
+          ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+          ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
           ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
           ", XF86AudioPlay, exec, playerctl play-pause"
           ", XF86AudioPause, exec, playerctl pause"
@@ -157,15 +159,13 @@
           "$mod, mouse:273, resizewindow"
           "$mod ALT, mouse:272, resizewindow"
         ];
-      exec-once = [
-        "waybar -c ~/.config/waybar/waybar.config -s ~/.config/waybar/waybar-black.css"
-        "wl-paste --type image --watch cliphist store # Stores only image data"
-        "wl-paste --type text --watch cliphist store # Stores only text data"
-      ];
+        exec-once = [
+          "waybar -c ~/.config/waybar/waybar.config -s ~/.config/waybar/waybar-black.css"
+          "wl-paste --type image --watch cliphist store # Stores only image data"
+          "wl-paste --type text --watch cliphist store # Stores only text data"
+        ];
       };
     };
-
-
   };
   imports = [
     ./dunst.nix
