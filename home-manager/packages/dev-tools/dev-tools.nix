@@ -36,6 +36,10 @@ in {
     goimports-reviser
     gotools
 
+    # janet
+    janet
+    jpm
+
     # json
     jq
 

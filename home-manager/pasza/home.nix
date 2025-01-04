@@ -92,6 +92,7 @@
     ../packages/chromium/chromium.nix
     ../packages/dbeaver/dbeaver.nix
     ../packages/dev-tools/dev-tools.nix
+    ../packages/emacs/emacs.nix
     ../packages/erdtree/erdtree.nix
     ../packages/eza/eza.nix
     ../packages/fd/fd.nix
@@ -100,6 +101,7 @@
     ../packages/fish/fish.nix
     ../packages/fzf/fzf.nix
     ../packages/gcp/gcp.nix
+    ../packages/ghostty/ghostty.nix
     ../packages/git/git.nix
     ../packages/helix/helix.nix
     ../packages/htop/htop.nix
@@ -127,6 +129,7 @@
     ../packages/vscode/vscode.nix
     ../packages/yazi/yazi.nix
     #      ../packages/ytdlp/ytdlp.nix
+    ../packages/zellij/zellij.nix
     ../packages/zoxide/zoxide.nix
 
     #      ../scripts/youtube_channel_archiver/youtube_channel_archiver.nix

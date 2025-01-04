@@ -1,4 +1,9 @@
-{ config, pkgs, fetchFromGitHub, ... }:
+{
+  config,
+  pkgs,
+  fetchFromGitHub,
+  ...
+}:
 #let
 #  modern-tmux-theme = mkTmuxPlugin {
 #    pluginName = "modern-tmux-theme";
@@ -61,6 +66,7 @@
       set -ga update-environment TERM_PROGRAM
       # TODO: perhaps take from variable
       set -g default-command bash
+      set -s escape-time 0
     '';
   };
 }
