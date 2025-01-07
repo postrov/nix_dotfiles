@@ -60,3 +60,4 @@
 [ ] FIX: rofi complaining about missing wallpaper
 [ ] todo.sh setup
 [ ] FIX: firefox video playback issue
+[ ] janet-lsp installed manually in tmp/janet-lsp + ~/bin/janet-lsp (needed to add shebang to startup script)
