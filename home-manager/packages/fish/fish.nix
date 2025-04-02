@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   home.packages = with pkgs; [
     fish
   ];
@@ -8,18 +10,18 @@
   home.file = {
     ".bashrc" = {
       text = ''
-          export PATH=''$PATH:~/bin
-          if [ -z ''${BASH_EXECUTION_STRING} ] && which fish > /dev/null 2> /dev/null; then
-            exec fish
-          fi
+        export PATH=''$PATH:~/bin
+        if [ -z ''${BASH_EXECUTION_STRING} ] && which fish > /dev/null 2> /dev/null; then
+          exec fish
+        fi
       '';
     };
     ".bash_profile" = {
       text = ''
-          if [ -f ~/.bashrc ];
-          then
-              .  ~/.bashrc;
-          fi
+        if [ -f ~/.bashrc ];
+        then
+            .  ~/.bashrc;
+        fi
       '';
     };
   };
@@ -27,8 +29,10 @@
     enable = true;
 
     shellAliases = {
-      "lg"="lazygit";
-      "t"="todo.sh";
+      "aid" = "aider --dark-mode --architect --no-auto-commits --no-dirty-commits --analytics-disable --no-auto-test --no-auto-lint";
+      # "aid" = "aider --dark-mode --architect --model sonnet --editor-model sonnet --no-auto-accept-architect --no-auto-commits --no-dirty-commits --watch-files --analytics-disable --no-auto-test --no-auto-lint";
+      "lg" = "lazygit";
+      "t" = "todo.sh";
 
       ".." = "cd ..";
       "..." = "cd ../..";
@@ -63,21 +67,21 @@
       cr = "cargo run";
 
       # git abbreviations
-      gaa  = "git add -A";
-      ga   = "git add";
-      gbd  = "git branch --delete";
-      gb   = "git branch";
-      gc   = "git commit";
-      gcm  = "git commit -m";
+      gaa = "git add -A";
+      ga = "git add";
+      gbd = "git branch --delete";
+      gb = "git branch";
+      gc = "git commit";
+      gcm = "git commit -m";
       gcob = "git checkout -b";
-      gco  = "git checkout";
-      gd   = "git diff";
-      gl   = "git log";
-      gp   = "git push";
+      gco = "git checkout";
+      gd = "git diff";
+      gl = "git log";
+      gp = "git push";
       gpom = "git push origin main";
-      gs   = "git status";
-      gst  = "git stash";
-      gstp =  "git stash pop";
+      gs = "git status";
+      gst = "git stash";
+      gstp = "git stash pop";
 
       # nix abbreviations
       ncg = "nix-collect-garbage";
@@ -92,7 +96,7 @@
     functions = {
       lsr = ''
         ls | rg -i $argv[1]
-       '';
+      '';
 
       mkcd = ''
         mkdir -p $argv[1]

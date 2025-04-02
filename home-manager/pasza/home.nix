@@ -45,6 +45,7 @@
   # Below didn't work for me, at least in shell
   systemd.user.sessionVariables = {
     EDITOR = "vim";
+    NIXOS_OZONE_WL = "1";
     #    TERM = "fish";
   };
 
