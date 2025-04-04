@@ -108,6 +108,7 @@
     ../packages/htop/htop.nix
     ../packages/httpie/httpie.nix
     ../packages/hyprland/hyprland.nix
+    ../packages/keepassxc/keepassxc.nix
     ../packages/kitty/kitty.nix
     ../packages/lazygit/lazygit.nix
     #      ../packages/megasync/megasync.nix
