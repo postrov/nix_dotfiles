@@ -59,6 +59,7 @@
           "kb_layout" = "pl";
           "touchpad" = {
             "disable_while_typing" = true;
+            "scroll_factor" = 0.2;
           };
         };
 
