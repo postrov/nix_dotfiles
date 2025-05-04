@@ -107,7 +107,7 @@
           #"$mod CTRL, W, exec, ~/.config/hypr/scripts/wallpaper.sh select"
           #"$mod CTRL, RETURN, exec, rofi -show drun"
           #"$mod CTRL, H, exec, ~/.config/hypr/scripts/keybindings.sh"
-          #"$mod SHIFT, B, exec, ~/.config/waybar/launch.sh"
+          "$mod SHIFT, B, exec, ~/.config/hypr/waybar-launch.sh"
           #"$mod SHIFT, R, exec, ~/.config/hypr/scripts/loadconfig.sh"
           #"$mod CTRL, F, exec, ~/.config/scripts/filemanager.sh"
           #"$mod CTRL, C, exec, ~/.config/scripts/cliphist.sh"

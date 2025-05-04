@@ -22,6 +22,10 @@ in {
     sbcl
     rlwrap
 
+    # erlang
+    erlang
+    rebar3
+
     # vcpkg
     # vcpkg-tool
 
