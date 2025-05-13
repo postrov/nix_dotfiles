@@ -55,6 +55,10 @@
         "monitor" = config.pasza.hyprland.monitor;
         "$mod" = "SUPER";
 
+        general = {
+          "layout" = "master";
+        };
+
         input = {
           "kb_layout" = "pl";
           "touchpad" = {
@@ -86,6 +90,7 @@
           "$mod, T, togglefloating"
           #"$mod SHIFT, T, exec, ~/.config/hypr/scripts/toggleallfloat.sh"
           "$mod SHIFT, J, togglesplit"
+          "$mod SHIFT, Y, layoutmsg, orientationcycle"
           "$mod, left, movefocus, l"
           "$mod, right, movefocus, r"
           "$mod, up, movefocus, u"
